@@ -176,11 +176,7 @@ const workExperiences = {
       company: "University of Florida",
       companylogo: require("./assets/images/UFL.png"),
       date: "March 2024 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      desc: "Enhanced error handling for Bluetooth connections in Karoo-to-Karoo communications by implementing thorough testing scenarios to simulate various connection conditions, ensuring consistent performance. Improved data synchronization and error handling between the Karoo device and connected sensors, such as power meters and heart rate monitors. Furthermore, I implemented background monitoring processes in the ConneXX folder to continuously check and update connection status, providing real-time information to users. This project utilized a tech stack primarily based on Java.",
     },
     {
       role: "Software Engineer",
