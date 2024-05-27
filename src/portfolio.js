@@ -183,7 +183,7 @@ const workExperiences = {
       company: "ZopSmart",
       companylogo: require("./assets/images/zops.jpeg"),
       date: "August 2022 – July 2023",
-      desc: "Contributed to the development of 'Rocket,' a microframework for building Java microservices. I spearheaded the creation of key modules, including the Redis Module with comprehensive support for logging, monitoring, health checks, tracing, and security, as well as the Tracing Module with OpenTelemetry integration and support for Zipkin and New Relic. Additionally, I enhanced the framework with CircuitBreaker support in HTTP Client, SFTP support in File Store Module, and OpenAPI/Swagger generation using JAX-RS annotations, ensuring seamless and efficient project deployment."
+      desc: "Contributed to the development of 'Rocket', a microframework for building Java microservices. I spearheaded the creation of key modules, including the Redis Module with comprehensive support for logging, monitoring, health checks, tracing, and security, as well as the Tracing Module with OpenTelemetry integration and support for Zipkin and New Relic. Additionally, I enhanced the framework with CircuitBreaker support in HTTP Client, SFTP support in File Store Module, and OpenAPI/Swagger generation using JAX-RS annotations, ensuring seamless and efficient project deployment."
     },
     {
       role: "Software Engineer Intern",
