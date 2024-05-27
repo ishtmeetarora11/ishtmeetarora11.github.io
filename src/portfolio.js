@@ -190,7 +190,7 @@ const workExperiences = {
       company: "ZopSmart",
       companylogo: require("./assets/images/zops.jpeg"),
       date: "February 2022 – August 2022",
-      desc: "Part of the Compiler Engine team at ZopSmart, I played a critical role in enhancing the reliability and functionality of our coding platform. I transitioned the project from a monolithic architecture to 13 microservices, added support for multiple Java files in Docker containers, and reduced compilation time for Java and C++ by 40%. I also conducted performance tests with JMeter and Minikube, set up GitHub actions for CI/CD and automated deployments to Google Cloud, and automated code snippet generation for six languages. Additionally, I successfully managed a coding test for 2000+ students, ensuring precise cluster requirements."
+      desc: "Part of the Compiler Engine team at ZopSmart, I played a critical role in enhancing the reliability and functionality of our coding platform. I transitioned the project from a monolithic architecture to 13 microservices, added support for multiple Java files in Docker containers, and reduced compilation time for Java and C++ by 40%. I also conducted performance tests with JMeter and Minikube, set up GitHub actions for CI/CD and automated deployments to Google Cloud and automated code snippet generation for six languages. Additionally, I successfully managed a coding test for 2000+ students, ensuring precise cluster requirements."
     }
   ]
 };
