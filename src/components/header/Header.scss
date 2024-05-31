@@ -174,9 +174,34 @@
   .header .menu-icon {
     display: none;
   }
+  .header .logo {
+    display: block;
+    flex: none;
+    float: left;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-top: 10px;
+    line-height: normal;
+  }
 }
 @media (max-width: 960px) and (min-width: 768px) {
   .header {
     font-size: 12px;
   }
 }
+@media (min-width: 320px) and (max-width: 768px) {
+  .main {
+    width: auto;
+  }
+  .header .logo {
+    display: block;
+    flex: none;
+    float: left;
+    font-size: 1.2em;
+    text-decoration: none;
+    margin-top: 10px;
+    line-height: normal;
+    position: fixed;
+  }
+}
+

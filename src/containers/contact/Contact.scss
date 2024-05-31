@@ -79,6 +79,11 @@
   .contact-div-main > * {
     flex: 1;
   }
+  .greeting-image-div {
+    height: 290px;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
   .contact-title {
     font-size: 56px;
     font-weight: 400;
@@ -107,5 +112,26 @@
   .contact-email-div {
     text-align: center;
     margin-top: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact-image-div {
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 10;
+  }
+}
+@media (min-width: 320px) and (max-width: 768px){
+  .main {
+    width: auto;
+  }
+  .contact-image-div{
+    text-align: center;
+  }
+  .contact-image-div {
+    max-width: 100%;
+    height: auto;
+    margin-left: 10rem;
+    margin-top: -4rem;
   }
 }
