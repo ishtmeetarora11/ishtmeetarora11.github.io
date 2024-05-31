@@ -106,11 +106,9 @@
     font-size: 20px;
   }
   .contact-des-div {
-    text-align: center;
     margin-top: 1.5rem;
   }
   .contact-email-div {
-    text-align: center;
     margin-top: 1.5rem;
   }
 }
@@ -125,13 +123,16 @@
   .main {
     width: auto;
   }
+  .contact-div-main {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 70px;
+    
+  }
   .contact-image-div{
     text-align: center;
   }
-  .contact-image-div {
-    max-width: 100%;
-    height: auto;
-    margin-left: 10rem;
-    margin-top: -4rem;
+  .contact-image-div{
+    display: none;
   }
 }

@@ -21,3 +21,14 @@
   -webkit-font-variant-ligatures: no-common-ligatures;
   padding: 0 20px;
 }
+@media (min-width: 320px) and (max-width: 768px){
+  .main {
+    width: auto;
+  }
+  .splash-title-container {
+    font-size: 1.8rem;
+    text-decoration: none;
+    margin-top: -5rem;
+  }
+
+}
