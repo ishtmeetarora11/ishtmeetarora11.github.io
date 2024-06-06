@@ -26,7 +26,7 @@ const greeting = {
     "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Java / Python / Reactjs / Nodejs and some other cool libraries and frameworks."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1TH27cZLJ_1PvCURgmPp56amv4JGvyXMA/view?usp=drive_link", // Set to empty to hide the button
+    "https://drive.google.com/file/d/15rkwdpFHlmordnCDEGcoAqaYbwK7q-S8/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -34,7 +34,7 @@ const greeting = {
 
 const socialMediaLinks = {
   github: "https://github.com/ishtmeetarora11",
-  linkedin: "https://www.linkedin.com/in/ishtmeet-singh-arora/",
+  linkedin: "https://www.linkedin.com/in/ishtmeet-arora/",
   facebook: "https://www.facebook.com/Ishtmeet.arora/",
   instagram: "https://www.instagram.com/_ishtmeet11_/",
   twitter: "https://twitter.com/ishtupaaji",
