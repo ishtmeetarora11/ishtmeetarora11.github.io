@@ -130,7 +130,7 @@ const educationInfo = {
       duration: "August 2023 - May 2025",
       desc: "GPA: 3.83 / 4",
       descBullets: [
-        "Graduate Research Assistant in the Learn Dialogue Lab",
+        "Graduate Assistant Volunteer in the Learn Dialogue Lab",
         "Finalist in Gator AI Hackathon"
       ]
     },
