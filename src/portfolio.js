@@ -124,7 +124,7 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "University arnav",
+      schoolName: "University of Florida",
       logo: require("./assets/images/UFL.png"),
       subHeader: "Master of Science in Computer Science",
       duration: "August 2023 - May 2025",
