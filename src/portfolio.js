@@ -36,7 +36,7 @@ const socialMediaLinks = {
   github: "https://github.com/ishtmeetarora11",
   linkedin: "https://www.linkedin.com/in/ishtmeet-arora/",
   facebook: "https://www.facebook.com/Ishtmeet.arora/",
-  instagram: "https://www.instagram.com/_ishtmeet11_/",
+  instagram: "https://www.instagram.com/_isht11_/",
   twitter: "https://twitter.com/ishtupaaji",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
