@@ -130,7 +130,8 @@ const educationInfo = {
       duration: "August 2023 - May 2025",
       desc: "GPA: 3.83 / 4",
       descBullets: [
-        "Graduate Assistant Volunteer in the Learn Dialogue Lab",
+        "Graduate Research Assistant under Dr. Walter Leite",
+        "Graduate Teaching Assistant in the Software Engineering Course",
         "Finalist in Gator AI Hackathon"
       ]
     },
