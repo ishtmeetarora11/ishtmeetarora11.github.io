@@ -26,7 +26,7 @@ const greeting = {
     "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Java / Python / Reactjs / Nodejs and some other cool libraries and frameworks."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1U8NmFMDxX3yWFHdo1JyaNanV6m_Nv8KX/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1aBTUHKgaxNTlHLKWIVeNYNytz3jbi_WU/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -128,7 +128,7 @@ const educationInfo = {
       logo: require("./assets/images/UFL.png"),
       subHeader: "Master of Science in Computer Science",
       duration: "August 2023 - May 2025",
-      desc: "GPA: 3.83 / 4",
+      desc: "GPA: 3.85 / 4",
       descBullets: [
         "Graduate Research Assistant under Dr. Walter Leite",
         "Graduate Teaching Assistant in the Software Engineering Course",
@@ -173,11 +173,18 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
+      role: "Graduate Research Assistant",
+      company: "University of Florida",
+      companylogo: require("./assets/images/UFL.png"),
+      date: "October 2024 – Present",
+      desc: "Designed and deployed a responsive React frontend for Storiza, a cutting-edge literacy platform by Dr. Walter Leite's Virtual Learning Lab, improving accessibility for K-3 students and educators. Engineered backend services with SQL and MongoDB, enabling real-time, adaptive storytelling based on reading levels and keywords, enhancing personalized learning outcomes. Implemented GCP Cloud Monitoring for proactive infrastructure management, ensuring 99.9% uptime and seamless user experience during critical learning sessions. Contributed to the platform's mission to foster literacy skills by integrating scalable storytelling technology that supports diverse learner needs and improves engagement by 30%.",
+    },
+    {
       role: "Graduate Assistant Volunteer",
       company: "University of Florida",
       companylogo: require("./assets/images/UFL.png"),
-      date: "March 2024 – Present",
-      desc: "Enhanced error handling for Bluetooth connections in Karoo-to-Karoo communications by implementing thorough testing scenarios to simulate various connection conditions, ensuring consistent performance. Improved data synchronization and error handling between the Karoo device and connected sensors, such as power meters and heart rate monitors. Furthermore, I implemented background monitoring processes in the ConneXX folder to continuously check and update connection status, providing real-time information to users. This project utilized a tech stack primarily based on Java.",
+      date: "March 2024 – August 2024",
+      desc: "Engaged in the development of learning environments within Dr. Kristy Boyer’s Lab, utilizing Python, JavaScript, React, HTML and CSS for real-time visualizations in sports and virtual agents for game-based learning. Enhanced error handling for Bluetooth connections in Karoo-to-Karoo communications by implementing thorough testing scenarios to simulate various connection conditions, ensuring consistent performance. Furthermore, I implemented background monitoring processes in the ConneXX folder to continuously check and update connection status, providing real-time information to users. This project utilized a tech stack primarily based on Java.",
     },
     {
       role: "Software Engineer",
