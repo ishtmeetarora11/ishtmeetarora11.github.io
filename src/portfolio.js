@@ -177,28 +177,28 @@ const workExperiences = {
       company: "University of Florida",
       companylogo: require("./assets/images/UFL.png"),
       date: "October 2024 – Present",
-      desc: "Designed and deployed a responsive React frontend for Storiza, a cutting-edge literacy platform by Dr. Walter Leite's Virtual Learning Lab, improving accessibility for K-3 students and educators. Engineered backend services with SQL and MongoDB, enabling real-time, adaptive storytelling based on reading levels and keywords, enhancing personalized learning outcomes. Implemented GCP Cloud Monitoring for proactive infrastructure management, ensuring 99.9% uptime and seamless user experience during critical learning sessions. Contributed to the platform's mission to foster literacy skills by integrating scalable storytelling technology that supports diverse learner needs and improves engagement by 30%.",
+      desc: "Developed and deployed a responsive React frontend and backend with SQL/MongoDB for Storiza, enhancing adaptive storytelling for K–3 learners. Integrated GCP Cloud Monitoring to ensure 99.9% uptime. Enabled real-time, adaptive storytelling based on reading levels and keywords, enhancing personalized learning outcomes through scalable, personalized storytelling, supporting diverse literacy needs in Dr. Leite’s Virtual Learning Lab platform.",
     },
     {
       role: "Graduate Assistant Volunteer",
       company: "University of Florida",
       companylogo: require("./assets/images/UFL.png"),
       date: "March 2024 – August 2024",
-      desc: "Engaged in the development of learning environments within Dr. Kristy Boyer’s Lab, utilizing Python, JavaScript, React, HTML and CSS for real-time visualizations in sports and virtual agents for game-based learning. Enhanced error handling for Bluetooth connections in Karoo-to-Karoo communications by implementing thorough testing scenarios to simulate various connection conditions, ensuring consistent performance. Furthermore, I implemented background monitoring processes in the ConneXX folder to continuously check and update connection status, providing real-time information to users. This project utilized a tech stack primarily based on Java.",
+      desc: "Contributed to Dr. Kristy Boyer’s Lab by developing real-time sports visualizations and game-based virtual agents using Python, JavaScript, and React. Improved Bluetooth error handling in Karoo-to-Karoo communications and implemented Java-based background monitoring in ConneXX to ensure reliable connectivity and real-time status updates for enhanced learning environments.",
     },
     {
       role: "Software Engineer",
       company: "ZopSmart",
       companylogo: require("./assets/images/zops.jpeg"),
       date: "August 2022 – July 2023",
-      desc: "Contributed to the development of 'Rocket', a microframework for building Java microservices. I spearheaded the creation of key modules, including the Redis Module with comprehensive support for logging, monitoring, health checks, tracing, and security, as well as the Tracing Module with OpenTelemetry integration and support for Zipkin and New Relic. Additionally, I enhanced the framework with CircuitBreaker support in HTTP Client, SFTP support in File Store Module, and OpenAPI/Swagger generation using JAX-RS annotations, ensuring seamless and efficient project deployment."
+      desc: "Led development of core modules for 'Rocket', a Java microservices framework. Built Redis and Tracing modules with OpenTelemetry, Zipkin, and New Relic integration. Added CircuitBreaker to HTTP Client, SFTP to File Store, and OpenAPI/Swagger generation via JAX-RS, streamlining logging, monitoring, and deployment across services."
     },
     {
       role: "Software Engineer Intern",
       company: "ZopSmart",
       companylogo: require("./assets/images/zops.jpeg"),
       date: "February 2022 – August 2022",
-      desc: "Part of the Compiler Engine team at ZopSmart, I played a critical role in enhancing the reliability and functionality of our coding platform. I transitioned the project from a monolithic architecture to 13 microservices, added support for multiple Java files in Docker containers, and reduced compilation time for Java and C++ by 40%. I also conducted performance tests with JMeter and Minikube, set up GitHub actions for CI/CD and automated deployments to Google Cloud and automated code snippet generation for six languages. Additionally, I successfully managed a coding test for 2000+ students, ensuring precise cluster requirements."
+      desc: "At ZopSmart, transitioned a monolithic compiler platform to 13 microservices, enabling multi-file Java support and reducing Java/C++ compilation time by 40%. Set up CI/CD with GitHub Actions, GCP deployments, and automated code snippet generation in six languages. Managed coding tests for 2000+ students with accurate cluster provisioning."
     }
   ]
 };

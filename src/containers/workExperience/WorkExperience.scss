@@ -1,6 +1,6 @@
 .experience-cards-div {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(3, minmax(290px, 1fr));
   gap: 1rem 1rem;
 }
 
@@ -23,13 +23,19 @@
 
 /* Media Query */
 
-@media (max-width: 1380px) {
+@media (min-width: 769px) and (max-width: 1380px) {
+  .experience-cards-div {
+    grid-template-columns: repeat(2, minmax(290px, 1fr));
+  }
   .experience-heading {
     font-size: 40px;
   }
 }
 
 @media (max-width: 768px) {
+  .experience-cards-div {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .experience-heading {
     font-size: 30px;
     text-align: center;
