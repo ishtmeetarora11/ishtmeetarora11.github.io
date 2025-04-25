@@ -180,6 +180,13 @@ const workExperiences = {
       desc: "Developed and deployed a responsive React frontend and backend with SQL/MongoDB for Storiza, enhancing adaptive storytelling for K–3 learners. Integrated GCP Cloud Monitoring to ensure 99.9% uptime. Enabled real-time, adaptive storytelling based on reading levels and keywords, enhancing personalized learning outcomes through scalable, personalized storytelling, supporting diverse literacy needs in Dr. Leite’s Virtual Learning Lab platform.",
     },
     {
+      role: "Software Engineer Apprenticeship",
+      company: "Aerial Tech",
+      companylogo: require("./assets/images/at_ag_logo.jpeg"),
+      date: "January 2025 – May 2025",
+      desc: "As part of the Sky Radar project at Aerial Tech, I engineered frontend functionalities to enhance real-time drone tracking and airspace visualization. I developed a dynamic Area of Interest (AOI) widget enabling rectangle and polygon drawing with live vertex editing using React.js and Leaflet.js. I integrated AOI CRUD operations with backend APIs for persistent storage and built a sidebar-driven management table with editable fields. My work optimized user workflows, improved spatial data interaction, and boosted platform responsiveness.",
+    },
+    {
       role: "Graduate Assistant Volunteer",
       company: "University of Florida",
       companylogo: require("./assets/images/UFL.png"),
