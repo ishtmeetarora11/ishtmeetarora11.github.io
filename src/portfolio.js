@@ -173,10 +173,17 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
+      role: "Software Engineer 2",
+      company: "Oracle",
+      companylogo: require("./assets/images/Oracle.png"),
+      date: "July 2025 – Present",
+      desc: "Part of the Aries, PostgreSQL Team in Oracle Cloud Infrastructure leading the migration of the PostgreSQL Console UI from a React based implementation to the internal MAUI Redwood framework to improve maintainability. Developed end-to-end observability for the Aries File System via Java-based metrics emission, powering Grafana dashboards. Worked across UI console and backend services as a full-stack contributor. Contributing to an AI-powered Root Cause Analysis project that accelerates on-call triage and strengthens incident resolution workflows."
+    },
+    {
       role: "Graduate Research Assistant",
       company: "University of Florida",
       companylogo: require("./assets/images/UFL.png"),
-      date: "October 2024 – Present",
+      date: "October 2024 – July 2025",
       desc: "Developed and deployed a responsive React frontend and backend with SQL/MongoDB for Storiza, enhancing adaptive storytelling for K–3 learners. Integrated GCP Cloud Monitoring to ensure 99.9% uptime. Enabled real-time, adaptive storytelling based on reading levels and keywords, enhancing personalized learning outcomes through scalable, personalized storytelling, supporting diverse literacy needs in Dr. Leite’s Virtual Learning Lab platform.",
     },
     {
