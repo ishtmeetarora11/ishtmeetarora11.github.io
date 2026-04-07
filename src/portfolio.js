@@ -23,7 +23,7 @@ const greeting = {
   username: "Ishtmeet Singh Arora",
   title: "Hi all, I'm Ishtmeet",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Java / Python / Reactjs / Nodejs and some other cool libraries and frameworks."
+    "Software Engineer at Oracle 🚀 - distributed systems, cloud-native features, and full-stack development across Java, TypeScript, and React."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1u6-c9zD17dcADNZf_X9uerrSERYRkB3w/view?usp=sharing", // Set to empty to hide the button
@@ -46,15 +46,17 @@ const socialMediaLinks = {
 // Skills Section
 
 const skillsSection = {
-  title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  title: "What I Do",
+  subTitle: "Software Engineer focused on cloud infrastructure, distributed systems, and full-stack product development",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Building and shipping production features on Oracle Cloud Infrastructure from UI console to backend Java services"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
     emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡ Designing observability pipelines, metrics emission, and monitoring dashboards for large-scale distributed systems"
+    ),
+    emoji(
+      "⚡ Full-stack development across TypeScript/React frontends and Java/Python backends with cloud-native deployments on OCI, AWS, and GCP"
     )
   ],
 
