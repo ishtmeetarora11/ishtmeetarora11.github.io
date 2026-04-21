@@ -26,7 +26,7 @@ const greeting = {
     "Software Engineer at Oracle 🚀 - distributed systems, cloud-native features, and full-stack development across Java, TypeScript, and React."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1u6-c9zD17dcADNZf_X9uerrSERYRkB3w/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1L5rtru1dOzu0rMLr8y53cNklWDTiYSGL/view?usp=drive_link", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -60,8 +60,6 @@ const skillsSection = {
     )
   ],
 
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
