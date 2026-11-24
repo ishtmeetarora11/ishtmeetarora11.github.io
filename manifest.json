@@ -1,6 +1,6 @@
 {
-  "short_name": "DeveloperFolio",
-  "name": "DeveloperFolio",
+  "short_name": "Ishtmeet Arora",
+  "name": "Ishtmeet Arora",
   "icons": [
     {
       "src": "/favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#6c63ff",
-  "background_color": "#ffffff"
+  "theme_color": "#ff7139",
+  "background_color": "#090b10"
 }
