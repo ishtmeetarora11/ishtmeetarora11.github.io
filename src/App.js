@@ -262,7 +262,15 @@ function App() {
       <main id="main" tabIndex="-1">
         <section className="hero shell" id="greeting">
           <div className="hero-copy">
-            <p className="hero-hello">Hi, I’m</p>
+            <div className="hero-introduction">
+              <img
+                src={`${process.env.PUBLIC_URL}/portrait.webp`}
+                alt="Ishtmeet Singh Arora"
+                width="44"
+                height="44"
+              />
+              <p className="hero-hello">Hi, I’m</p>
+            </div>
             <h1>
               Ishtmeet
               <span className="surname">
@@ -317,23 +325,17 @@ function App() {
               </a>
             </div>
           </div>
-          <figure className="hero-portrait">
-            <div className="portrait-frame">
-              <img
-                src={`${process.env.PUBLIC_URL}/portrait.webp`}
-                alt="Ishtmeet Singh Arora smiling outdoors"
-                width="640"
-                height="720"
-              />
-              <span className="portrait-corner" aria-hidden="true" />
-            </div>
-            <figcaption>
-              <span className="portrait-caption">
-                The person behind the code.
-              </span>
-              <span>San Francisco Bay Area</span>
-            </figcaption>
-          </figure>
+          <div
+            className="network-stage hero-network"
+            aria-label="Interactive network illustration"
+          >
+            <p className="network-invitation">
+              A few connections. Endless possibilities.
+            </p>
+            <span className="network-hint">
+              MOVE YOUR CURSOR · CLICK A NODE · SCROLL TO EXPLORE
+            </span>
+          </div>
           <div className="hero-bottom">
             <a href="#about" className="scroll-hint">
               <span>↓</span>A LITTLE ABOUT ME
