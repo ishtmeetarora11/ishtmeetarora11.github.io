@@ -659,69 +659,87 @@ function App() {
         </section>
         <section className="contact-section shell" id="contact">
           <div className="contact-card">
-            <div>
+            <div className="contact-intro">
               <p className="eyebrow">
-                <span>04</span>GET IN TOUCH
+                <span>04</span>THE NEXT CHAPTER
               </p>
               <h2>
-                Have something
-                <br />
-                <span>in mind? Say hello.</span>
+                Let’s talk<span>ideas.</span>
               </h2>
               <p>
-                If my work resonates with you, I’d love to connect—about an
-                engineering role, a project, or an interesting technical
-                problem.
+                Have a role, a project, or a wonderfully difficult problem in
+                mind? I’d love to hear about it.
               </p>
-            </div>
-            <div className="contact-details">
-              <p className="contact-label">Send me a note</p>
-              <a className="contact-email" href={`mailto:${profile.email}`}>
-                {profile.email}
-                <Arrow diagonal />
-              </a>
-              <button className="copy-email" onClick={copyEmail}>
-                Copy email address
-              </button>
+              <div className="contact-address">
+                <a className="contact-email" href={`mailto:${profile.email}`}>
+                  {profile.email}
+                  <Arrow diagonal />
+                </a>
+                <button className="copy-email" onClick={copyEmail}>
+                  Copy address
+                </button>
+              </div>
               <p className="copy-status" role="status">
                 {copyStatus}
               </p>
-              <div className="contact-profiles">
-                <a
-                  href={profile.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div>
-                    <strong>LinkedIn</strong>
-                    <span>Let’s connect</span>
-                  </div>
-                  <Arrow diagonal />
-                </a>
-                <a
-                  href={profile.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div>
-                    <strong>GitHub</strong>
-                    <span>Explore my code</span>
-                  </div>
-                  <Arrow diagonal />
-                </a>
-                <a
-                  href={profile.resume}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div>
-                    <strong>Résumé</strong>
-                    <span>My experience, at a glance</span>
-                  </div>
-                  <Arrow diagonal />
-                </a>
-              </div>
             </div>
+            <figure className="contact-portrait">
+              <span className="portrait-label">THE PERSON BEHIND THE CODE</span>
+              <div className="portrait-aura" aria-hidden="true" />
+              <div
+                className="portrait-orbit portrait-orbit-back"
+                aria-hidden="true"
+              />
+              <div className="contact-photo">
+                <img
+                  src={`${process.env.PUBLIC_URL}/linkedin-portrait.webp`}
+                  alt="Ishtmeet Singh Arora’s LinkedIn portrait"
+                  width="570"
+                  height="670"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                className="portrait-orbit portrait-orbit-front"
+                aria-hidden="true"
+              />
+              <span className="portrait-spark" aria-hidden="true">
+                ✦
+              </span>
+              <figcaption>
+                <span>Ishtmeet.</span>
+                <small>SOFTWARE ENGINEER. ALWAYS CURIOUS.</small>
+              </figcaption>
+              <a
+                className="portrait-hello"
+                href={`mailto:${profile.email}`}
+                aria-label="Say hello by email"
+              >
+                <span>SAY HELLO</span>
+                <Arrow diagonal />
+                <span>LET’S CONNECT</span>
+              </a>
+              <div className="portrait-location">
+                <span className="status-light" /> SAN FRANCISCO BAY AREA{" "}
+                <Arrow diagonal />
+              </div>
+            </figure>
+          </div>
+          <div className="contact-social-row">
+            <p>Find me elsewhere</p>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn <Arrow diagonal />
+            </a>
+            <a href={profile.github} target="_blank" rel="noopener noreferrer">
+              GitHub <Arrow diagonal />
+            </a>
+            <a href={profile.resume} target="_blank" rel="noopener noreferrer">
+              Résumé <Arrow diagonal />
+            </a>
           </div>
           <footer>
             <span>© {new Date().getFullYear()} ISHTMEET SINGH ARORA</span>
