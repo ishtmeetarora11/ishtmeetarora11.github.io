@@ -140,3 +140,45 @@ export const projects = [
     ]
   }
 ];
+
+// Education dates and distinctions from the existing portfolio; master's GPA
+// reflects the newer LinkedIn profile.
+export const education = [
+  {
+    id: "florida",
+    name: "University of Florida",
+    location: "Gainesville, Florida",
+    logo: "university-florida.webp",
+    level: "GRADUATE",
+    dates: "2023 — 2025",
+    abbreviation: "M.S.",
+    degree: "Master of Science",
+    gradeLabel: "GPA",
+    grade: "3.86",
+    gradeScale: "4.00",
+    highlights: [
+      "Graduate research",
+      "Software Engineering teaching assistant",
+      "Gator AI Hackathon finalist"
+    ],
+    note: "Research. Teaching. Applied learning."
+  },
+  {
+    id: "jaypee",
+    name: "Jaypee Institute of Information Technology",
+    location: "Noida, India",
+    logo: "jiit.webp",
+    level: "UNDERGRADUATE",
+    dates: "2018 — 2022",
+    abbreviation: "B.Tech.",
+    degree: "Bachelor of Technology · Honors",
+    gradeLabel: "CGPA",
+    grade: "8.3",
+    gradeScale: "10",
+    highlights: [
+      "Graduated with honors",
+      "Ranked in the top 10% of the program"
+    ],
+    note: "Where my engineering journey began."
+  }
+];

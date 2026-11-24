@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
 import NetworkBackground from "./NetworkBackground";
-import {profile, experience, projects} from "./profileData";
+import {profile, experience, education, projects} from "./profileData";
 import "./App.scss";
 
 const stacks = [
@@ -174,6 +174,7 @@ function App() {
   const commands = [
     {name: "View selected work", meta: "WORK", href: "#work"},
     {name: "Explore experience", meta: "CAREER", href: "#experience"},
+    {name: "Explore education", meta: "EDUCATION", href: "#education"},
     {name: "Explore open-source projects", meta: "CODE", href: "#opensource"},
     {name: "View résumé", meta: "PDF ↗", href: profile.resume, external: true},
     {
@@ -219,9 +220,10 @@ function App() {
           >
             {[
               ["00", "About", "#about"],
-              ["01", "Work", "#work"],
-              ["02", "Experience", "#experience"],
-              ["03", "Stack", "#skills"]
+              ["01", "Experience", "#experience"],
+              ["02", "Education", "#education"],
+              ["03", "Work", "#work"],
+              ["04", "Stack", "#skills"]
             ].map(([n, name, href]) => (
               <a key={name} href={href} onClick={() => setMenuOpen(false)}>
                 <span>{n}</span>
@@ -380,11 +382,137 @@ function App() {
             </a>
           </div>
         </section>
+        <section className="section shell experience-section" id="experience">
+          <div className="experience-intro">
+            <p className="eyebrow">
+              <span>01</span>WORK EXPERIENCE
+            </p>
+            <h2>
+              My journey
+              <br />
+              <span>so far.</span>
+            </h2>
+            <p>
+              From developer tooling to cloud infrastructure. Each chapter adds
+              another layer to how I think about systems.
+            </p>
+            <a
+              className="text-link"
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Full story on LinkedIn <Arrow diagonal />
+            </a>
+            <div className="career-path">
+              <span>ZopSmart</span>
+              <i>↗</i>
+              <span>UF</span>
+              <i>↗</i>
+              <span>Oracle</span>
+              <i>↗</i>
+              <strong>Illumio</strong>
+            </div>
+          </div>
+          <div className="timeline">
+            {experience.slice(0, 3).map(job => (
+              <Job key={job.company + job.role} job={job} />
+            ))}
+            <details className="earlier-experience">
+              <summary>
+                Earlier chapters <span>2021 — 2025</span>
+                <b aria-hidden="true">+</b>
+              </summary>
+              {experience.slice(3).map(job => (
+                <Job key={job.company + job.role} job={job} />
+              ))}
+            </details>
+          </div>
+        </section>
+        <section className="section shell education-section" id="education">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">
+                <span>02</span>EDUCATION
+              </p>
+              <h2>
+                Always a student.
+                <br />
+                <span>Always building.</span>
+              </h2>
+            </div>
+            <p className="section-description">
+              Two degrees in computer science. A lasting curiosity about how
+              things work—and how to make them better.
+            </p>
+          </div>
+          <div className="education-grid">
+            {education.map((school, index) => (
+              <article
+                className={`education-card education-${school.id}`}
+                key={school.id}
+              >
+                <div className="education-orbits" aria-hidden="true">
+                  <i />
+                  <i />
+                  <i />
+                  <b>✦</b>
+                </div>
+                <div className="education-card-top">
+                  <span className="education-level">
+                    0{index + 1} / {school.level}
+                  </span>
+                  <span>{school.dates}</span>
+                </div>
+                <div className="education-identity">
+                  <div className="university-seal">
+                    <img
+                      src={`${process.env.PUBLIC_URL}/${school.logo}`}
+                      alt=""
+                      width="80"
+                      height="80"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div>
+                    <h3>{school.name}</h3>
+                    <p>{school.location}</p>
+                  </div>
+                </div>
+                <div className="education-degree">
+                  <span>{school.abbreviation}</span>
+                  <div>
+                    <h4>{school.degree}</h4>
+                    <p>Computer Science</p>
+                  </div>
+                </div>
+                <div className="education-achievements">
+                  <div className="education-grade">
+                    <span>{school.gradeLabel}</span>
+                    <p>
+                      <strong>{school.grade}</strong>
+                      <span> / {school.gradeScale}</span>
+                    </p>
+                  </div>
+                  <ul>
+                    {school.highlights.map(item => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="education-card-footer">
+                  <span>{school.note}</span>
+                  <span aria-hidden="true">↗</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
         <section className="section shell" id="work">
           <div className="section-heading">
             <div>
               <p className="eyebrow">
-                <span>01</span>SELECTED WORK
+                <span>03</span>SELECTED WORK
               </p>
               <h2>
                 A few things
@@ -562,58 +690,11 @@ function App() {
             </div>
           </details>
         </section>
-        <section className="section shell experience-section" id="experience">
-          <div className="experience-intro">
-            <p className="eyebrow">
-              <span>02</span>EXPERIENCE
-            </p>
-            <h2>
-              My journey
-              <br />
-              <span>so far.</span>
-            </h2>
-            <p>
-              From developer tooling to cloud infrastructure. Each chapter adds
-              another layer to how I think about systems.
-            </p>
-            <a
-              className="text-link"
-              href={profile.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Full story on LinkedIn <Arrow diagonal />
-            </a>
-            <div className="career-path">
-              <span>ZopSmart</span>
-              <i>↗</i>
-              <span>UF</span>
-              <i>↗</i>
-              <span>Oracle</span>
-              <i>↗</i>
-              <strong>Illumio</strong>
-            </div>
-          </div>
-          <div className="timeline">
-            {experience.slice(0, 3).map(job => (
-              <Job key={job.company + job.role} job={job} />
-            ))}
-            <details className="earlier-experience">
-              <summary>
-                Earlier chapters <span>2021 — 2025</span>
-                <b aria-hidden="true">+</b>
-              </summary>
-              {experience.slice(3).map(job => (
-                <Job key={job.company + job.role} job={job} />
-              ))}
-            </details>
-          </div>
-        </section>
         <section className="section shell" id="skills">
           <div className="section-heading">
             <div>
               <p className="eyebrow">
-                <span>03</span>SKILLS
+                <span>04</span>SKILLS
               </p>
               <h2>
                 Tools I’ve
@@ -641,27 +722,12 @@ function App() {
               </article>
             ))}
           </div>
-          <div className="education-strip">
-            <span className="eyebrow">FOUNDATIONS</span>
-            <div>
-              <h3>University of Florida</h3>
-              <p>
-                M.S. Computer Science <span>3.86 / 4.00</span>
-              </p>
-            </div>
-            <div>
-              <h3>Jaypee Institute of Information Technology</h3>
-              <p>
-                B.Tech. Computer Science <span>8.3 / 10</span>
-              </p>
-            </div>
-          </div>
         </section>
         <section className="contact-section shell" id="contact">
           <div className="contact-card">
             <div className="contact-intro">
               <p className="eyebrow">
-                <span>04</span>THE NEXT CHAPTER
+                <span>05</span>THE NEXT CHAPTER
               </p>
               <h2>
                 Let’s talk<span>ideas.</span>
