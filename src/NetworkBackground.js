@@ -57,15 +57,6 @@ export default function NetworkBackground({
     const scroll = () => {
       const total = document.documentElement.scrollHeight - height;
       targetScroll = total > 0 ? (window.scrollY / total) * 4 : 0;
-      const hero = document.getElementById("greeting");
-      const heroEnd = hero ? hero.offsetTop + hero.offsetHeight : height;
-      const fadeDistance = Math.max(180, height * 0.4);
-      const progress = Math.min(
-        1,
-        Math.max(0, (window.scrollY - heroEnd + fadeDistance) / fadeDistance)
-      );
-      const softness = progress * progress * (3 - 2 * progress);
-      canvas.style.setProperty("--scene-blur", `${softness * 1.6}px`);
       dirty = true;
     };
     const move = event => {
