@@ -29,9 +29,9 @@ const impact = [
   {
     label: "DEVELOPER INFRASTRUCTURE",
     company: "ZopSmart",
-    title: "One monolith. Thirteen services.",
+    title: "Reworking a compiler platform",
     description:
-      "Helped evolve a compiler engine into 13 microservices. Added multi-file Java support, automated delivery, and validated cluster capacity for 2,000+ students.",
+      "I helped evolve a compiler engine into 13 microservices. Added multi-file Java support, automated delivery, and validated cluster capacity for 2,000+ students.",
     metric: "40%",
     result: "faster Java / C++ compilation",
     flow: ["CODE", "CONTAINERS", "EXECUTION"],
@@ -40,9 +40,9 @@ const impact = [
   {
     label: "CLOUD OBSERVABILITY",
     company: "Oracle",
-    title: "Make the system explain itself.",
+    title: "Observability for cloud services",
     description:
-      "Built Java-based metrics emission for the Aries File System, powering Grafana dashboards and operational monitoring. Contributed to AI-assisted root cause analysis.",
+      "I built Java-based metrics emission for the Aries File System, powering Grafana dashboards and operational monitoring. Contributed to AI-assisted root cause analysis.",
     metric: "End to end",
     result: "from service metrics to operational insight",
     flow: ["SERVICES", "METRICS", "GRAFANA"],
@@ -51,9 +51,9 @@ const impact = [
   {
     label: "ADAPTIVE LEARNING",
     company: "University of Florida",
-    title: "A better story for every learner.",
+    title: "Building an adaptive learning platform",
     description:
-      "Built the frontend and backend of Storiza, an adaptive literacy platform for K–3 students. Connected personalized storytelling to reading levels, keywords, and cloud monitoring.",
+      "I built the frontend and backend of Storiza, an adaptive literacy platform for K–3 students. Connected personalized storytelling to reading levels, keywords, and cloud monitoring.",
     metric: "99.9%",
     result: "uptime supported by GCP monitoring",
     flow: ["LEARNER", "STORY ENGINE", "FEEDBACK"],
@@ -172,7 +172,7 @@ function App() {
     }
   };
   const commands = [
-    {name: "View selected engineering", meta: "WORK", href: "#work"},
+    {name: "View selected work", meta: "WORK", href: "#work"},
     {name: "Explore experience", meta: "CAREER", href: "#experience"},
     {name: "Explore open-source projects", meta: "CODE", href: "#opensource"},
     {name: "View résumé", meta: "PDF ↗", href: profile.resume, external: true},
@@ -218,6 +218,7 @@ function App() {
             aria-label="Main navigation"
           >
             {[
+              ["00", "About", "#about"],
               ["01", "Work", "#work"],
               ["02", "Experience", "#experience"],
               ["03", "Stack", "#skills"]
@@ -261,25 +262,31 @@ function App() {
       <main id="main" tabIndex="-1">
         <section className="hero shell" id="greeting">
           <div className="hero-copy">
-            <div className="role-pill">
-              <span className="status-light" />
-              ENGINEERING AT <strong>illumio</strong>
-            </div>
-            <p className="hero-name">&gt; hello, I’m Ishtmeet Singh Arora.</p>
+            <p className="hero-hello">Hi, I’m</p>
             <h1>
-              Built to scale.
-              <br />
-              Engineered for
-              <br />
-              <span>resilience.</span>
+              Ishtmeet
+              <span className="surname">
+                Singh Arora<span className="name-period">.</span>
+              </span>
             </h1>
+            <p className="hero-role">
+              Software engineer. <span>Backend at heart.</span>
+            </p>
             <p className="hero-description">
-              Backend at heart. I build distributed systems, cloud
-              infrastructure, and software that holds up when it matters.
+              I build backend systems and cloud software. My journey has taken
+              me from developer tools at ZopSmart to cloud infrastructure at
+              Oracle—and now Illumio.
+            </p>
+            <p className="current-role">
+              <span className="status-light" />
+              Currently{" "}
+              <strong>
+                {profile.role} at {profile.company}
+              </strong>
             </p>
             <div className="hero-actions">
               <a className="button primary" href="#work">
-                Explore my work <Arrow />
+                See my work <Arrow />
               </a>
               <a
                 className="button secondary"
@@ -290,145 +297,102 @@ function App() {
                 View résumé <Arrow diagonal />
               </a>
             </div>
-            <div className="hero-profile">
+            <div className="hero-socials" aria-label="Find me online">
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub <Arrow diagonal />
+              </a>
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn <Arrow diagonal />
+              </a>
+              <a href={`mailto:${profile.email}`}>
+                Say hello <Arrow />
+              </a>
+            </div>
+          </div>
+          <figure className="hero-portrait">
+            <div className="portrait-frame">
               <img
                 src={`${process.env.PUBLIC_URL}/portrait.webp`}
-                alt="Ishtmeet Singh Arora"
-                width="40"
-                height="40"
+                alt="Ishtmeet Singh Arora smiling outdoors"
+                width="640"
+                height="720"
               />
-              <div>
-                <strong>Member of Technical Staff II @ Illumio</strong>
-                <span>Ex-Oracle · M.S. CS, University of Florida</span>
-              </div>
+              <span className="portrait-corner" aria-hidden="true" />
             </div>
-          </div>
-          <div
-            className="network-stage"
-            aria-label="Interactive synthetic network background"
-          >
-            <div className="scene-label">
-              <span className="status-light" />
-              ZERO TRUST / IN MOTION
-              <span className="scene-label-sub">
-                An exploration of connected systems
+            <figcaption>
+              <span className="portrait-caption">
+                The person behind the code.
               </span>
-            </div>
-            <div className="scene-inspector">
-              <span>SELECTED WORKLOAD</span>
-              <strong>
-                {["svc", "data", "ops"][Math.floor(selected / 30)]}-
-                {String(selected + 1).padStart(2, "0")}
-              </strong>
-              <button
-                onClick={() => setSelected((selected + 11) % 90)}
-                aria-label="Inspect next network node"
-              >
-                Next node <Arrow />
-              </button>
-            </div>
-            <div className="network-controls">
-              <div className="network-control-heading">
-                <span>NETWORK PLAYGROUND</span>
-                <span>CONCEPT SIMULATION</span>
-              </div>
-              <div className="control-row">
-                <button
-                  className={
-                    enforced ? "policy-button active" : "policy-button"
-                  }
-                  aria-pressed={enforced}
-                  onClick={() => setEnforced(!enforced)}
-                >
-                  <span className="policy-icon" aria-hidden="true">
-                    ◇
-                  </span>
-                  Segmentation {enforced ? "on" : "off"}
-                </button>
-                <button
-                  className="breach-button"
-                  onClick={() => setBreach(!breach)}
-                >
-                  {breach ? "↻ Reset" : "ϟ Simulate breach"}
-                </button>
-                <button
-                  className="motion-toggle"
-                  aria-label={
-                    motion
-                      ? "Pause background animation"
-                      : "Play background animation"
-                  }
-                  onClick={() => setMotion(!motion)}
-                >
-                  {motion ? "Ⅱ" : "▷"}
-                </button>
-              </div>
-              <p
-                className={`network-status ${breach ? "has-event" : ""}`}
-                role="status"
-              >
-                {breach
-                  ? enforced
-                    ? "Threat contained within one trust zone. Switch segmentation off to compare."
-                    : "Lateral paths open. The simulated threat can reach every zone."
-                  : "Click a node. Follow the connections. Scroll to transform the system."}
-              </p>
-            </div>
-          </div>
+              <span>San Francisco Bay Area</span>
+            </figcaption>
+          </figure>
           <div className="hero-bottom">
-            <a href="#work" className="scroll-hint">
-              <span>↓</span>SCROLL TO EXPLORE THE SYSTEM
+            <a href="#about" className="scroll-hint">
+              <span>↓</span>A LITTLE ABOUT ME
             </a>
-            <span className="location">SAN FRANCISCO BAY AREA</span>
+            <button
+              className="motion-toggle"
+              aria-label={
+                motion
+                  ? "Pause background animation"
+                  : "Play background animation"
+              }
+              onClick={() => setMotion(!motion)}
+            >
+              {motion ? "Ⅱ Pause motion" : "▷ Play motion"}
+            </button>
           </div>
         </section>
-        <section
-          className="impact-strip shell"
-          aria-label="Engineering outcomes"
-        >
-          <div className="strip-label">
-            <span>PRODUCTION IMPACT</span>
-            <p>
-              More than
+        <section className="about-section shell" id="about">
+          <div>
+            <p className="eyebrow">BEHIND THE RÉSUMÉ</p>
+            <h2>
+              An engineer,
               <br />
-              lines of code.
+              <span>always learning.</span>
+            </h2>
+          </div>
+          <div className="about-copy">
+            <p>
+              My work spans compiler platforms, microservices, cloud
+              observability, and learning tools. I’m most at home in the
+              backend, and I’ve also built the interfaces that help people use
+              those systems.
             </p>
-          </div>
-          <div>
-            <strong>
-              13<span> services</span>
-            </strong>
-            <p>Monolith → microservices</p>
-          </div>
-          <div>
-            <strong>
-              40<span>% faster</span>
-            </strong>
-            <p>Java / C++ compilation</p>
-          </div>
-          <div>
-            <strong>
-              2,000<span>+ students</span>
-            </strong>
-            <p>Coding platform capacity</p>
+            <p>
+              Along the way, I earned my M.S. in Computer Science at the
+              University of Florida, worked on research and education projects,
+              and taught as a graduate teaching assistant. Today, I’m based in
+              the Bay Area and work at Illumio.
+            </p>
+            <a className="text-link" href="#experience">
+              Follow my journey <Arrow />
+            </a>
           </div>
         </section>
         <section className="section shell" id="work">
           <div className="section-heading">
             <div>
               <p className="eyebrow">
-                <span>01</span>SELECTED ENGINEERING
+                <span>01</span>SELECTED WORK
               </p>
               <h2>
-                Complexity in.
+                A few things
                 <br />
-                <span>Clarity out.</span>
+                <span>I’ve worked on.</span>
               </h2>
             </div>
             <p className="section-description">
-              Infrastructure, observability, and products.
-              <br />
-              Real problems. Software that made a difference.
+              Projects from my time at ZopSmart, Oracle, and the University of
+              Florida—and the part I played in each.
             </p>
           </div>
           <div className="impact-grid">
@@ -479,8 +443,8 @@ function App() {
         <section className="section shell open-source" id="opensource">
           <div className="compact-heading">
             <div>
-              <p className="eyebrow">THE EXPERIMENTS</p>
-              <h2>Built out of curiosity.</h2>
+              <p className="eyebrow">PERSONAL PROJECTS</p>
+              <h2>What I build to learn.</h2>
             </div>
             <a
               className="text-link"
@@ -524,15 +488,87 @@ function App() {
             ))}
           </div>
         </section>
+        <section
+          className="background-note shell"
+          aria-label="About the interactive background"
+        >
+          <details>
+            <summary>
+              <span>A little creative coding, too.</span>
+              <span>
+                Explore the background <b aria-hidden="true">+</b>
+              </span>
+            </summary>
+            <p>
+              A nod to zero-trust security. The network reshapes as you scroll;
+              these controls let you explore how segmentation changes a
+              simulated breach. All nodes and connections are synthetic.
+            </p>
+            <div
+              className="network-stage"
+              aria-label="Interactive synthetic network background"
+            >
+              <div className="scene-inspector">
+                <span>SELECTED NODE</span>
+                <strong>
+                  {["svc", "data", "ops"][Math.floor(selected / 30)]}-
+                  {String(selected + 1).padStart(2, "0")}
+                </strong>
+                <button
+                  onClick={() => setSelected((selected + 11) % 90)}
+                  aria-label="Inspect next network node"
+                >
+                  Next node <Arrow />
+                </button>
+              </div>
+              <div className="network-controls">
+                <div className="network-control-heading">
+                  <span>BACKGROUND EXPERIMENT</span>
+                  <span>CONCEPT SIMULATION</span>
+                </div>
+                <div className="control-row">
+                  <button
+                    className={
+                      enforced ? "policy-button active" : "policy-button"
+                    }
+                    aria-pressed={enforced}
+                    onClick={() => setEnforced(!enforced)}
+                  >
+                    <span className="policy-icon" aria-hidden="true">
+                      ◇
+                    </span>
+                    Segmentation {enforced ? "on" : "off"}
+                  </button>
+                  <button
+                    className="breach-button"
+                    onClick={() => setBreach(!breach)}
+                  >
+                    {breach ? "↻ Reset" : "ϟ Simulate breach"}
+                  </button>
+                </div>
+                <p
+                  className={`network-status ${breach ? "has-event" : ""}`}
+                  role="status"
+                >
+                  {breach
+                    ? enforced
+                      ? "Threat contained within one trust zone. Switch segmentation off to compare."
+                      : "Lateral paths open. The simulated threat can reach every zone."
+                    : "Click a node. Follow the connections. Scroll to transform the system."}
+                </p>
+              </div>
+            </div>
+          </details>
+        </section>
         <section className="section shell experience-section" id="experience">
           <div className="experience-intro">
             <p className="eyebrow">
-              <span>02</span>THE EXECUTION TRACE
+              <span>02</span>EXPERIENCE
             </p>
             <h2>
-              A career of
+              My journey
               <br />
-              <span>building deeper.</span>
+              <span>so far.</span>
             </h2>
             <p>
               From developer tooling to cloud infrastructure. Each chapter adds
@@ -575,18 +611,17 @@ function App() {
           <div className="section-heading">
             <div>
               <p className="eyebrow">
-                <span>03</span>THE TOOLKIT
+                <span>03</span>SKILLS
               </p>
               <h2>
-                Deep in the backend.
+                Tools I’ve
                 <br />
-                <span>Fluent across the stack.</span>
+                <span>worked with.</span>
               </h2>
             </div>
             <p className="section-description">
-              The right abstraction. The right instrument.
-              <br />
-              The whole system in view.
+              Across backend services, cloud infrastructure, data, and the
+              occasional frontend.
             </p>
           </div>
           <div className="stack-grid">
@@ -624,19 +659,17 @@ function App() {
           <div className="contact-card">
             <div>
               <p className="eyebrow">
-                <span>04</span>OPEN A CONNECTION
+                <span>04</span>GET IN TOUCH
               </p>
               <h2>
-                The next interesting
+                Have something
                 <br />
-                problem starts with
-                <br />
-                <span>a conversation.</span>
+                <span>in mind? Say hello.</span>
               </h2>
               <p>
-                Building something ambitious? Let’s talk systems,
-                <br />
-                ideas, and what comes next.
+                If my work resonates with you, I’d love to connect—about an
+                engineering role, a project, or an interesting technical
+                problem.
               </p>
             </div>
             <div className="contact-terminal">
@@ -700,7 +733,7 @@ function App() {
           </div>
           <footer>
             <span>© {new Date().getFullYear()} ISHTMEET SINGH ARORA</span>
-            <span>THOUGHTFULLY ENGINEERED.</span>
+            <span>MADE BY ISHTMEET.</span>
             <a href="#greeting">BACK TO TOP ↑</a>
           </footer>
         </section>
