@@ -465,22 +465,12 @@ function App() {
                   <span>{school.dates}</span>
                 </div>
                 <div className="education-identity">
-                  <div className="university-seal">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/${school.logo}`}
-                      alt=""
-                      width="80"
-                      height="80"
-                      loading="lazy"
-                    />
-                  </div>
                   <div>
                     <h3>{school.name}</h3>
                     <p>{school.location}</p>
                   </div>
                 </div>
                 <div className="education-degree">
-                  <span>{school.abbreviation}</span>
                   <div>
                     <h4>{school.degree}</h4>
                     <p>Computer Science</p>
