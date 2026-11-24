@@ -330,7 +330,7 @@ function App() {
             aria-label="Interactive network illustration"
           >
             <p className="network-invitation">
-              A few connections. Endless possibilities.
+              Always curious. Always connecting the dots.
             </p>
             <span className="network-hint">
               MOVE YOUR CURSOR · CLICK A NODE · SCROLL TO EXPLORE
@@ -674,62 +674,52 @@ function App() {
                 problem.
               </p>
             </div>
-            <div className="contact-terminal">
-              <div className="terminal-bar">
-                <i />
-                <i />
-                <i />
-                <span>connect.sh</span>
-              </div>
-              <div className="terminal-body">
-                <p>
-                  <span className="terminal-prompt">~ $</span> whoami
-                </p>
-                <p className="terminal-answer">
-                  Ishtmeet Singh Arora
-                  <br />
-                  <span>Member of Technical Staff II @ Illumio</span>
-                </p>
-                <p>
-                  <span className="terminal-prompt">~ $</span>{" "}
-                  establish_connection
-                </p>
-                <a className="contact-email" href={`mailto:${profile.email}`}>
-                  {profile.email}
+            <div className="contact-details">
+              <p className="contact-label">Send me a note</p>
+              <a className="contact-email" href={`mailto:${profile.email}`}>
+                {profile.email}
+                <Arrow diagonal />
+              </a>
+              <button className="copy-email" onClick={copyEmail}>
+                Copy email address
+              </button>
+              <p className="copy-status" role="status">
+                {copyStatus}
+              </p>
+              <div className="contact-profiles">
+                <a
+                  href={profile.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div>
+                    <strong>LinkedIn</strong>
+                    <span>Let’s connect</span>
+                  </div>
                   <Arrow diagonal />
                 </a>
-                <button className="copy-email" onClick={copyEmail}>
-                  [ copy email address ]
-                </button>
-                <p className="copy-status" role="status">
-                  {copyStatus}
-                </p>
-                <div className="contact-links">
-                  <a
-                    href={profile.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    LinkedIn ↗
-                  </a>
-                  <a
-                    href={profile.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub ↗
-                  </a>
-                  <a
-                    href={profile.resume}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Résumé ↗
-                  </a>
-                </div>
-                <p className="terminal-cursor" aria-hidden="true">
-                  ~ $ <span>▊</span>
-                </p>
+                <a
+                  href={profile.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div>
+                    <strong>GitHub</strong>
+                    <span>Explore my code</span>
+                  </div>
+                  <Arrow diagonal />
+                </a>
+                <a
+                  href={profile.resume}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div>
+                    <strong>Résumé</strong>
+                    <span>My experience, at a glance</span>
+                  </div>
+                  <Arrow diagonal />
+                </a>
               </div>
             </div>
           </div>
